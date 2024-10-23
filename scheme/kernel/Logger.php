@@ -29,7 +29,7 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
  *
  * @package LavaLust
  * @author Ronald M. Marasigan <ronald.marasigan@yahoo.com>
- * @since Version 1
+ * @since Version 4
  * @link https://github.com/ronmarasigan/LavaLust
  * @license https://opensource.org/licenses/MIT MIT License
  */
