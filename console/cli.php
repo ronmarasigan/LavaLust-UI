@@ -44,6 +44,21 @@ $extends = ($file_type === 'Controller') ? 'Controller' : 'Model';
 // If it's a model, append "_model" to the class name for convention
 if ($file_type === 'Model') {
     $class_name .= '_model';
+    $content = "<?php
+    defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
+
+    class {class} extends {extends} {
+        
+        protected \$table = '';
+        protected \$primary_key = 'id';
+        
+        public function __construct()
+        {
+            parent::__construct();
+        }
+    }
+    ?>
+    ";
 }
 
 $file_path = APP_DIR . $sub_dir . '/' . $class_name . '.php';
