@@ -21,7 +21,7 @@ if (!$file_type) {
 }
 
 // Get the class name
-$class_name = ucfirst($argv[2]);
+$class_name = ucfirst(strtolower(preg_replace('/(?<!^)[A-Z]/', '_$0', $argv[2])));
 
 // Define the base content for the class file
 $content = "<?php
